@@ -1,0 +1,408 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-user-drag: none;
+    user-drag:none;
+}
+body{
+    font-family: 'Roboto', 'Noto', sans-serif;
+    color: #fff;
+    background-color: #121212;
+}
+button, .logo{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.nav{
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    width: 100%;
+    position: 0;
+    position: fixed;
+    top: 0;
+    height: 56px;
+    box-sizing: border-box;
+}
+.nav .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 150px;
+}
+.nav .left .sidebarButton{
+    background: url(../images/menu.png) center no-repeat;
+    background-size:20px 16px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.nav .left div .logo{
+    background: url(../images/ytLogo.png) no-repeat center;
+    width: 80px;
+    height: 24px;
+    background-size: contain;
+}
+.nav .left .logoWrap{
+    display: flex;
+}
+.nav .center{
+    display: flex;
+    align-items: center;
+    flex-basis: 640px;
+    height: 24px;
+}
+.nav .center .search{
+    flex-basis: 575px;
+    height: 32px;
+    padding-left: 10px;
+    background-color: #121212;
+    border: 1px solid #343434;
+    color: #eee;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 2px 0 0 2px;
+}
+.nav .center .search:focus{
+    border-color: #1c62b9;
+}
+.nav .center .searchButton{
+    flex-basis: 65px;;
+    height: 34px;
+    background-color: #343434;
+    background-size: 18px 18px; 
+    border: 1px solid #343434;
+    color: #666 !important;
+    font-size: 16px;
+    border-radius: 0 2px 2px 0;
+}
+.nav .center .searchButton:hover{
+    color: #888 !important;    
+}
+
+.nav .right{
+    flex-basis: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .right .upload{
+    background: url(../images/upload-button.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.nav .right .googleMenu{
+    background: url(../images/apps.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.nav .right .notification{
+    background: url(../images/notification.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.nav .right .userImg{
+    background: url(../images/photo.jpg) center no-repeat;
+    background-size:contain;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+sup{
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+/*888888888 SideBar 000000*/
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    background-color: #1c1c1c;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+}
+.sidebar::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.sidebar .top,.library,.subscription,.setting,.footer{
+    border-bottom:1px solid #2e2e2e;
+}
+.sidebar .top{
+    padding: 12px 0;
+}
+.element{
+    padding: 0 24px 0 24px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.element:hover{
+    background-color: #474747;
+}
+.element .name{
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #eaeaea;
+    margin-left: 20px;
+}
+.home .icon{
+    background: url(../images/homepage.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.trend .icon{
+    background: url(../images/fire.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.subs .icon{
+    background: url(../images/subscription.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.library{
+    padding: 8px 0 8px 0;
+}
+h4{
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .007px;
+    text-transform: uppercase;
+    color: #888888;
+    font-weight: bold;
+}
+h4+span{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    color: #888;
+}
+.hist .icon{
+    background: url(../images/history.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.later .icon{
+    background: url(../images/clock.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.play .icon{
+    background: url(../images/playlist.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.more .icon{
+    background: url(../images/arrowDown.png) center no-repeat;
+    background-size:13px 13px;
+    width: 35px;
+    height: 35px;
+}
+.setting,.footer,.subscription{
+    padding: 8px 0 8px 0;
+}
+.iconS{
+    background-size:15px 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.one .iconS{
+    background: url(../images/1.jpg) center no-repeat;
+}
+.two .iconS{
+    background: url(../images/2.jpg) center no-repeat;
+}
+.three .iconS{
+    background: url(../images/3.jpg) center no-repeat;
+}
+.four .iconS{
+    background: url(../images/4.jpg) center no-repeat;
+}
+
+.gear .icon{
+    background: url(../images/settings.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.report .icon{
+    background: url(../images/flag.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.help .icon{
+    background: url(../images/help.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.feed .icon{
+    background: url(../images/feedback.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.main{
+    margin-top: 56px;
+    margin-left: 240px;
+}
+.main container{
+    padding-top: 25px;
+    display: flex;
+}
+.main .container-one{
+    width: 77%;
+    margin: auto;
+    padding-top: 25px;
+    border-bottom: 1px solid #2e2e2e;
+    height: 550px;
+}
+.main .container-one h4, .main .container-two h4, .main .container-three h4{
+    color: #e2e2e2;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.row .video{
+    height: 210px;
+    width:205px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+}
+.container-one>span{
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;  
+}
+.video .image{
+    flex:5;
+    background: url(../images/5.jpg) no-repeat center;
+    background-size: 210px 118px;
+}
+.v1>.image{
+    background: url(../images/6.jpg) no-repeat center;
+} 
+.v2>.image{
+    background: url(../images/7.jpg) no-repeat center;
+} 
+.v3>.image{
+    background: url(../images/8.jpg) no-repeat center;
+} 
+.v4>.image{
+    background: url(../images/9.jpg) no-repeat center;
+} 
+.video .title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    flex: 2;
+    overflow: ellipsis;
+    max-height: 32px;
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+.fas{
+    color: #888888;
+}
+.video .channel{
+    flex: 1;
+    font-family: 'Roboto', sans-serif;    
+    font-size: 13px;
+    color: #888888;
+}
+.video .view{
+    flex: 1;
+    font-size: 13px;
+    color: #888888;
+}
+.video .view>span::after{
+    content: '•';
+    margin: 0 4px;
+}
+.container-two, .container-three{
+    width: 77%;
+    border-bottom: 1px solid #2e2e2e;
+    height: 275px;
+    margin: auto;
+    margin-top: 25px;
+}
+.container-two .row, .container-three .row{
+    position: relative;
+}
+.right-arr{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #929292;
+    background-color: #242424;
+    font-size: 18px;
+    position: absolute;
+    top: 40px;
+    right: -22px;
+}
+.container-three .row .channel::after{
+    content:"";
+    background: url(../images/checked.png) no-repeat;
+    display: inline-block;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+}
