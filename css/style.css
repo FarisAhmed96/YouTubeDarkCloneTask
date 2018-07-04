@@ -123,12 +123,63 @@ button, .logo{
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    z-index: 3;
+    position: relative;
 }
-.nav .right.dropdiv{
-    display: none;
-}
-.nav .right .userImg:hover+div.dropDiv{
 
+.nav .right .dropDiv{
+    position: absolute;
+    display: none;
+    z-index: 4;
+    top: 30px;
+    right: 20px;
+    width: 300px;
+    height: 0%;
+    overflow: hidden;
+    background-color: #242424;
+    transition: height 500ms;
+
+}
+.dropDiv .top .userImg{
+    margin: 0 5px;
+    /* margin-right: 10px; */
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+}
+.details{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.details>span.name{
+    color: #e9e9e9;
+    font-size: 16px;
+    font-weight: 500px;
+    font-family: Roboto, sans-serif;
+}
+.details>span.gmail{
+    color:#e9e9e9;
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav .right .dropDiv .top{
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 72px;
+    background-color: #4c4c4c;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.nav .right .userImg:hover>div.dropDiv,div.dropDiv:hover{
+    height: 300px;
+    transition: 2s;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 sup{
     font-size: 10px;
@@ -260,7 +311,36 @@ h4+span{
     height: 35px;
     border-radius: 50%;
 }
-
+.profile .icon{
+    background: url(../images/profiler.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.paid .icon{
+    background: url(../images/dollar.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.creator .icon{
+    background: url(../images/settings.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.s-acc .icon{
+    background: url(../images/switch.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
+.s-out .icon{
+    background: url(../images/signOut.png) center no-repeat;
+    background-size:17px 17px;
+    width: 35px;
+    height: 35px;
+}
 .hist .icon{
     background: url(../images/history.png) center no-repeat;
     background-size:17px 17px;
@@ -521,4 +601,7 @@ h4+span{
     width: 13px;
     height: 13px;
     margin-left: 5px;
+}
+.margin-10{
+    margin-bottom: 10px;
 }
