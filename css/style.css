@@ -27,6 +27,7 @@ button, .logo{
     top: 0;
     height: 56px;
     box-sizing: border-box;
+    z-index: 5;
 }
 .nav .left{
     display: flex;
@@ -159,6 +160,10 @@ sup{
 .sidebar .top{
     padding: 12px 0;
 }
+.sidebar>div:last-child{
+    border: none;
+}
+
 .element{
     padding: 0 24px 0 24px;
     height: 40px;
@@ -199,6 +204,12 @@ sup{
 .library{
     padding: 8px 0 8px 0;
 }
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
 h4{
     padding: 8px 24px;
     font-size: 14px;
@@ -213,6 +224,15 @@ h4+span{
     font-size: 13px;
     color: #888;
 }
+
+.container-three .fifaImg{
+    background: url(../images/fifa.jpg) center no-repeat;
+    background-size:contain;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
 .hist .icon{
     background: url(../images/history.png) center no-repeat;
     background-size:17px 17px;
@@ -300,13 +320,15 @@ h4+span{
     border-bottom: 1px solid #2e2e2e;
     height: 550px;
 }
+.main .container>div:last-child{
+    border: none;
+}
 .main .container-one h4, .main .container-two h4, .main .container-three h4{
     color: #e2e2e2;
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 300;
     padding: 0;
-    margin-bottom: 25px;
     display: inline-block;
 }
 .row{
