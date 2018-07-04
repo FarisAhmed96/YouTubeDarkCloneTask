@@ -6,6 +6,10 @@
     /* user-drag:none; */
     text-overflow: ellipsis;
 }
+a,a:hover,a:active, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
 body{
     font-family: 'Roboto', 'Noto', sans-serif;
     color: #fff;
@@ -43,7 +47,7 @@ button, .logo{
     height: 35px;
     border-radius: 50%;
 }
-.nav .left div .logo{
+.nav .left a .logo{
     background: url(../images/ytLogo.png) no-repeat center;
     width: 80px;
     height: 24px;
@@ -604,4 +608,169 @@ h4+span{
 }
 .margin-10{
     margin-bottom: 10px;
+}
+
+/* ************************************************************************ */
+
+.container2{
+    margin: 35px;
+    margin-top: 80px;
+    display: flex;
+}
+.container2 .vidContain{
+    flex: 2;
+    min-height: 500px;
+    width: 100%;
+}
+.container2 .sideSuggestion{
+    flex: 1;
+    width: 100%;
+    min-height: 500px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.container2 .sideSuggestion .suggestVid{
+    width: 402px;
+    height: 94px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+.container2 .sideSuggestion .top{
+    width:402px;
+    margin-bottom: 12px;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideSuggestion .top span:last-child{
+    display: flex;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    color: #888;
+    font-weight: 500;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+}
+.sideSuggestion .top span:first-child{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #e2e2e2;
+    font-weight: 500;
+}
+.sug-pic{
+    width: 168px;
+    height: 94px;
+    background: url(../images/aa.jpg) no-repeat center;
+    background-size: contain;
+    position: relative;
+}
+.sug-des{
+    margin: 8px;
+}
+.sug-des .channel, .sug-des .view{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888888;
+}
+.sug-des .title{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.vidContain .details>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.vidContain .details div span{
+    color: #888;
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+}
+.vidContain .details div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:300px;
+}
+.t-up{
+    background: url(../images/like.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.t-down{
+    background: url(../images/dislike.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.t-share{
+    background: url(../images/share.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.t-playlist{
+    background: url(../images/playlist2.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.t-menu{
+    background: url(../images/moreH.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.right-des>div{
+    cursor:pointer;
+}
+
+.vidContain .details div div span{
+    
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+    color: #888;
+}
+
+.vidContain .details>span{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 0;
+}
+.suggestVid .sug-pic::after{
+    content: "4:09";
+    background-color: #121212;
+    opacity: 0.8;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+.suggestVid:hover .sug-pic::before{
+    content: "";
+    background: url(../images/clockb.png) no-repeat center;
+    background-size: 13px 13px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(4,4,4,0.8);
+    border-radius: 2px;
+    font-size: 12px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }
