@@ -4,6 +4,7 @@
     outline: none;
     -webkit-user-drag: none;
     user-drag:none;
+    text-overflow: ellipsis;
 }
 body{
     font-family: 'Roboto', 'Noto', sans-serif;
@@ -140,6 +141,25 @@ sup{
     overflow-y: scroll;
     box-sizing: border-box;
     padding-bottom: 80px;
+}
+.sidebar .footer .contain{
+    width: 75%;
+    margin: auto;
+    color: #888888;
+    font-size: 13px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+}
+.footer .contain div p{
+    line-height: 1.5em;
+}
+.footer .contain div{
+    margin-top: 20px;
+}
+.copyright{
+    display: inline-block;
+    padding-top: 30px;
+    color:#a4a4a4;
 }
 .sidebar::-webkit-scrollbar {
     width: 0.4em;
@@ -355,6 +375,33 @@ h4+span{
     background: url(../images/5.jpg) no-repeat center;
     background-size: 210px 118px;
 }
+.video .image::after{
+    
+}
+.r1>.image{
+    background: url(../images/a.jpg) no-repeat center;
+}
+.r2>.image{
+    background: url(../images/b.jpg) no-repeat center;
+}
+.r3>.image{
+    background: url(../images/c.jpg) no-repeat center;
+}
+.r4>.image{
+    background: url(../images/d.jpg) no-repeat center;
+}
+.r5>.image{
+    background: url(../images/e.jpg) no-repeat center;
+}
+.r6>.image{
+    background: url(../images/f.jpg) no-repeat center;
+}
+.r7>.image{
+    background: url(../images/g.jpg) no-repeat center;
+}
+.r8>.image{
+    background: url(../images/h.jpg) no-repeat center;
+}
 .v1>.image{
     background: url(../images/6.jpg) no-repeat center;
 } 
@@ -369,6 +416,7 @@ h4+span{
 } 
 .video .title{
     font-family: 'Roboto', sans-serif;
+    max-width: 190px;
     font-weight: 500;
     flex: 2;
     overflow: ellipsis;
@@ -380,6 +428,18 @@ h4+span{
     display: flex;
     justify-content: space-between;
 }
+.video{
+    cursor: pointer;
+}
+.video:hover .title::after{
+        content: "";
+        background: url(../images/more.png) no-repeat center;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        margin-bottom: 15px;
+        margin-left: 10px;
+}
 .fas{
     color: #888888;
 }
@@ -388,6 +448,9 @@ h4+span{
     font-family: 'Roboto', sans-serif;    
     font-size: 13px;
     color: #888888;
+}
+.video .channel:hover{
+    color: #aaaaaa;
 }
 .video .view{
     flex: 1;
@@ -401,7 +464,7 @@ h4+span{
 .container-two, .container-three{
     width: 77%;
     border-bottom: 1px solid #2e2e2e;
-    height: 275px;
+    height: 290px;
     margin: auto;
     margin-top: 25px;
 }
